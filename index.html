@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galactic Invaders</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<canvas id="stars" style="position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;"></canvas>
+
+<div id="game-wrap">
+  <h1>GALACTIC INVADERS</h1>
+  <div id="hud">
+    <div>SCORE <span id="sc">0</span></div>
+    <div>BEST <span id="hi">0</span></div>
+    <div>WAVE <span id="wv">1</span></div>
+    <div>LIVES <span id="lv">❤️❤️❤️</span></div>
+  </div>
+  <canvas id="c" width="600" height="520"></canvas>
+  <div id="msg">PRESS ENTER TO START</div>
+  <div id="controls">← → MOVE &nbsp;|&nbsp; SPACE SHOOT &nbsp;|&nbsp; ENTER START</div>
+</div>
+    <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
+  * { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+  body {
+    background: #000010;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Orbitron', sans-serif;
+    overflow: hidden;
+    position: relative;
+  }
+
+  #starfield {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  #game-wrap {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #00ff88;
+    text-shadow: 0 0 20px #00ff88, 0 0 50px #00cc66;
+    letter-spacing: 0.2em;
+    margin-bottom: 8px;
+    background: linear-gradient(90deg, #00ff88, #00ccff, #ff44aa, #00ff88);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s linear infinite;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: 0%; }
+    100% { background-position: 200%; }
+  }
+
+  #hud {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 10px;
+    font-size: 0.65rem;
+    color: #aaa;
+    letter-spacing: 0.1em;
+  }
+
+  #hud span { 
+    color: #00ff88; 
+    font-weight: 700; 
+}
+
+  canvas {
+    border: 1px solid #00ff8844;
+    box-shadow: 0 0 40px rgba(0,255,136,0.2), inset 0 0 40px rgba(0,0,0,0.8);
+    display: block;
+    background: transparent;
+  }
+
+  #msg {
+    margin-top: 14px;
+    font-size: 0.65rem;
+    color: #00ff88;
+    letter-spacing: 0.2em;
+    min-height: 1.4em;
+    text-align: center;
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes blink { 50% { opacity: 0; } }
+
+  #controls {
+    margin-top: 10px;
+    font-size: 0.45rem;
+    color: #555;
+    letter-spacing: 0.08em;
+  }
