@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,21 +7,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-<canvas id="stars" style="position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;"></canvas>
+  <!-- controls star and star patterns in js -->
+<canvas id="stars" style="position:fixed; inset:0; width:100%; height:100%;"></canvas>
 
 <div id="game-wrap">
   <h1>GALACTIC INVADERS</h1>
   <div id="hud">
-    <div>SCORE <span id="sc">0</span></div>
-    <div>BEST <span id="hi">0</span></div>
-    <div>WAVE <span id="wv">1</span></div>
-    <div>LIVES <span id="lv">❤️❤️❤️</span></div>
+    <div>Score: <span id="sc">0</span></div>
+    <div>HIGHSCORE: <span id="hi">0</span></div>
+    <div>Wave: <span id="wv">1</span></div>
+    <div>Lives: <span id="lv">❤️❤️❤️</span></div>
   </div>
-  <canvas id="c" width="600" height="520"></canvas>
+
+  <canvas id="myCanvas" width="600" height="520"></canvas>
   <div id="msg">PRESS ENTER TO START</div>
-  <div id="controls">← → MOVE &nbsp;|&nbsp; SPACE SHOOT &nbsp;|&nbsp; ENTER START</div>
+  <div id="controls">&larr; &rarr; MOVE &nbsp;|&nbsp; SPACE SHOOT &nbsp;|&nbsp; ENTER START</div>
 </div>
-    <script src="app.js"></script>
+<script src="game.js"></script>
 </body>
 </html>
